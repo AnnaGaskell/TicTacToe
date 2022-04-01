@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-require 'player'
-require 'board_game'
+require_relative 'player.rb'
+require_relative 'board_game.rb'
 
 def valid_sign?(input)
   input.length == 1
@@ -29,7 +29,7 @@ end
 print 'Enter Sign: '
 @sign2 = gets.chomp
 while (@sign1 == @sign2) || !valid_sign?(@sign2)
-  print 'Invalid sign. Enter another sign: '
+  print 'Invalid sign. Enter another sign for youself: '
   @sign2 = gets.chomp
 end
 

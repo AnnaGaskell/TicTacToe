@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'player'
+require_relative 'player.rb'
 
 # class for board play
 class BoardGame
@@ -50,10 +50,10 @@ class BoardGame
       turn
       display_board
     end
-    print 'Game Over'
+    print 'Game Over '
 
     if won?
-      puts "Congratulations #{@current_player.name}, You Won!"
+      puts " Congratulations #{@current_player.name}, You Won!"
     else
       puts 'Draw Game, Better Luck Next Time!'
     end
