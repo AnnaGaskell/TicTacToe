@@ -1,15 +1,24 @@
 # frozen_string_literal: true
 
-# class for player info
-class Player
-  attr_accessor :name, :icon
+# class Person
+class Person
+  attr_accessor :name
 
-  def initialize(name, icon)
+  def initialize(name)
     @name = name
-    @icon = icon
+  end
+end
+
+# class Player
+class Player < Person
+  attr_reader :sign
+
+  def initialize(name, sign)
+    super(name)
+    @sign = sign
   end
 
   def print
-    puts "Name : #{@name}, Icon : #{@icon}"
+    puts "Name : #{@name}, Sign : #{@sign}"
   end
 end
